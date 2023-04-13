@@ -27,7 +27,8 @@ def get_user():
             "email":row.email,
             "job":row.job
         }
-    return "ok"
+        data.append(user)
+     return jsonify(data)
 
 
 class User(db.Model):
